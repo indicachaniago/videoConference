@@ -16,4 +16,7 @@ app.get( '/', ( req, res ) => {
 
 io.of( '/stream' ).on( 'connection', stream );
 
-server.listen( 3000 );
+const PORT = process.env.PORT || 443;
+app.listen(PORT, () => {
+    console.log(`Our app is running on port ${ PORT }`);
+});
