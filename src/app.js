@@ -1,6 +1,6 @@
 let express = require( 'express' );
 let app = express();
-let server = require( 'https' ).Server( app );
+let server = require( 'http' ).Server( app );
 let io = require( 'socket.io' )( server );
 let stream = require( './ws/stream' );
 let path = require( 'path' );
